@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>LowCostPLay</title>
+	<link rel="icon" type="image/x-icon" href="Images/image.jpg">
+	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="items.css">
+</head>
+<body>
+
+	 <!-- header------------------------------------------------------------ -->
+    <header>
+        <h1></h1>
+        <nav>
+            <ul>
+                <div id="fb"><a href="https://www.facebook.com/znon.ck.1"><img src="Icons/facebook.png" alt="facebook" width="30" height="30"></a></div>
+                <div id="x"><a href="#"><img src="Icons/twitter.png" alt="twitter" width="30" height="30"></a></div>
+                <div id="ig"><a href="#"><img src="Icons/instagram.png" alt="instagram" width="30" height="30"></a></div>
+            </ul>   
+            </ul>   
+        </nav>
+        <div id="menuButton">
+            <img src="Icons/menuButton.png" alt="menu" width="40" height="40" onclick="toggleMenu()">
+        </div>  
+
+        <div id="searchBar">
+            <img src="Icons/search.png" width="25px" height="25px">
+            <input type="search" placeholder="Search">
+        </div>
+
+        <div id="profile-container">
+            <div id="profile">
+                <div id="profile-info">
+                    <a href=""><img src="Icons/profile.png" height="40" width="40px"></a>
+                    <h3>Juan Carlos</h3>
+                </div>
+                <hr>
+
+                </a>
+                <a href="" class="profile-link">
+                    <img src="Icons/settings.png" height="25px" width="25px">
+                    <p>Setting & Privacy</p>
+                    <span>></span>
+                </a>
+                <a href="" class="profile-link">
+                    <img src="Icons/help.png" height="25px" width="25px">
+                    <p>Help & Support</p>
+                    <span>></span>
+                </a>
+                <a href="" class="profile-link">
+                    <img src="Icons/logout.png" height="25px" width="25px">
+                    <p>Logout</p>
+                    <span>></span>
+                </a>
+
+                <div class="">
+                    <a href="" class="log-up"><p>Login</p></a>
+                    <div class="or"<p>or</p></div>
+                    <a href="" class="log-up"><p>Sign up</p></a>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+ <!-- drop down menu for image button in left------------------------------------------------------------  -->
+    <div id="left-menu-button">
+            <a href="index.html"><img src="Images/getBack.gif" alt="menu" width="150" height="150" onclick="toggleMenu2()"></a>
+    </div>   
+
+
+
+
+<!-- Main content------------------------------------------------------------  -->
+	<div id="back-color"></div>
+
+	<div id="product-container">
+		<img src="Clothes/BLADE_3.png">
+		
+		<div id="data-container">
+			<h2>Blade</h2>
+			<h1>₱1000.00</h1>
+			<h5>-50%</h5>
+			<s>₱3000.00</s>
+			<h3>Quantity</h3>
+
+			<div class="wrapper">
+				<span class="minus">-</span>
+				<span class="num">01</span>
+				<span class="plus">+</span>
+			</div>
+
+			<button class="button">Buy Now</button>
+			<button class="button">Add to Cart</button>
+
+
+
+		</div>
+	</div>
+
+
+
+
+
+<footer id="footer-container">
+
+    <div id="footer-details">
+        <h2>LowCostplay</h2>
+        <p>Where creativity shines brighter than the price tag.</p>
+    </div>
+
+    <div id="footer-icons">
+        <img src="Icons/lite.png">
+        <img src="Icons/instagram.png">
+        <img src="Icons/x.png">
+        <img src="Icons/pinterest.png">
+        <img src="Icons/youtube.png">
+    </div>
+    
+
+    <div id="right-data">
+        <p>Get the Freshest LowCostplay news</p>
+
+        <form style="position: relative;">
+            <input type="text" name="" placeholder="Your email here">
+            <div id="right-button">Subscribe</div>
+        </form>  
+
+
+    </div>
+    
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+	const plus = document.querySelector(".plus"),
+	minus = document.querySelector(".minus"),
+	num = document.querySelector(".num");
+
+	let a = 1;
+
+	plus.addEventListener("click", ()=> {
+		a++;
+		a = (a < 10) ? "0" + a : a;
+		num.innerText = a;
+		console.log(a); 
+	});
+
+	minus.addEventListener("click", ()=> {
+		if(a>1){
+			a--;
+			a = (a < 10) ? "0" + a : a;
+			num.innerText = a;
+		}
+	});
+
+</script>
+<script src="script.js"></script>
+
+</body>
+</html>
